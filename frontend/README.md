@@ -1,16 +1,35 @@
-# React + Vite
+# ResolveHub - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ResolveHub ek IT service desk / ticket management tool hai. Ye uska React frontend hai, jisme Employee, Agent aur Admin ke alag dashboards hain.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React (Vite)
+- React Router
+- Axios
 
-## React Compiler
+## Chalane ke steps
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+App `http://localhost:5173` pe khulega. Login page pe Employee / Agent / Admin demo buttons se role choose kar sakte ho.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Folder Structure
+
+```text
+src/
+├── components/   # Navbar, Sidebar, StatCard, StatusBadge, TicketCard, TicketForm, Loading
+├── pages/        # Login, Register, Dashboards, MyTickets, TicketDetails, Admin pages
+├── services/     # api.js, authService, ticketService, userService
+├── routes/       # AppRoutes.jsx
+├── context/      # AuthContext.jsx
+├── hooks/        # useAuth.js
+└── utils/        # constants.js, helpers.js
+```
+
+## Status
+
+Abhi frontend dummy data pe chal raha hai. Backend (Spring Boot) ready hone par `services/` ke through API se connect kiya jayega.
